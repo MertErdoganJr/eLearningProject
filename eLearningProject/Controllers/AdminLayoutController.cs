@@ -32,5 +32,20 @@ namespace eLearningProject.Controllers
         {
             return PartialView();
         }
+
+        public PartialViewResult PartialPageRowTitle()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialPreloader()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialFooter()
+        {
+            return PartialView();
+        }
     }
 }
