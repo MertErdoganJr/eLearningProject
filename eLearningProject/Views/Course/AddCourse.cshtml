@@ -1,0 +1,16 @@
+﻿@model eLearningProject.DAL.Entities.Course
+
+@{
+    ViewBag.Title = "AddCourse";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Kurs Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Kurs Adını Giriniz</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn btn-primary">Kursu Kaydet</button>
+</form>
+

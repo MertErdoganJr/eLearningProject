@@ -133,6 +133,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="DAL\Context\eLearningContext.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
     <Compile Include="DAL\Entities\Course.cs" />
@@ -841,10 +842,12 @@
     <Content Include="Views\Student\AddStudent.cshtml" />
     <Content Include="Views\Student\UpdateStudent.cshtml" />
     <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\Course\AddCourse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Testimonial\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
