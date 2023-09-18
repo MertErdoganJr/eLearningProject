@@ -1,0 +1,29 @@
+﻿@model eLearningProject.DAL.Entities.About
+
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Hakkımızda Güncelleme Sayfası</h3>
+<form method="post">
+    <br />
+    <input type="hidden" name="AboutID" class="form-control" value="@Model.AboutID" />
+    <label>Başlık</label>
+    <input type="text" name="Title" value="@Model.Title" class="form-control" />
+    <br /><br />
+    <label>Açıklama</label>
+    <input type="text" name="Description" value="@Model.Description" class="form-control" />
+    <br /><br />
+    <label>Yetenekler</label>
+    <input type="text" name="Skill1" value="@Model.Skill1" class="form-control" />
+    <input type="text" name="Skill2" value="@Model.Skill2" class="form-control" />
+    <input type="text" name="Skill3" value="@Model.Skill3" class="form-control" />
+    <input type="text" name="Skill4" value="@Model.Skill4" class="form-control" />
+    <input type="text" name="Skill5" value="@Model.Skill5" class="form-control" />
+    <input type="text" name="Skill6" value="@Model.Skill6" class="form-control" />
+    <br /><br />
+    <button class="btn btn-outline-primary">Yazıyı Güncelle</button>
+</form>
+
+
