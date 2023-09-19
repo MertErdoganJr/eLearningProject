@@ -133,6 +133,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstructorAnlysisController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
@@ -186,6 +187,10 @@
     <Compile Include="Migrations\202309181747074_mig_address_message.cs" />
     <Compile Include="Migrations\202309181747074_mig_address_message.designer.cs">
       <DependentUpon>202309181747074_mig_address_message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309192007244_mig_add_instructor_title.cs" />
+    <Compile Include="Migrations\202309192007244_mig_add_instructor_title.designer.cs">
+      <DependentUpon>202309192007244_mig_add_instructor_title.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -905,7 +910,6 @@
     <Content Include="Views\Student\AddStudent.cshtml" />
     <Content Include="Views\Student\UpdateStudent.cshtml" />
     <Content Include="Views\Course\Index.cshtml" />
-    <Content Include="Views\Course\AddCourse.cshtml" />
     <Content Include="Views\Testimonial\AddTestimonial.cshtml" />
     <Content Include="Views\Testimonial\Index.cshtml" />
     <Content Include="Templates\elearning-html-template\lib\owlcarousel\LICENSE" />
@@ -1000,6 +1004,9 @@
     <Content Include="Views\Address\AddAddress.cshtml" />
     <Content Include="Views\Address\UpdateAddress.cshtml" />
     <Content Include="Views\Course\CreateCourse.cshtml" />
+    <Content Include="Views\Course\UpdateCourse.cshtml" />
+    <Content Include="Views\InstructorAnlysis\Index.cshtml" />
+    <Content Include="Views\InstructorAnlysis\InstructorPanelPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1046,6 +1053,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202309181747074_mig_address_message.resx">
       <DependentUpon>202309181747074_mig_address_message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309192007244_mig_add_instructor_title.resx">
+      <DependentUpon>202309192007244_mig_add_instructor_title.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

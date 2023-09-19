@@ -81,29 +81,18 @@ namespace eLearningProject.Controllers
             return View(value);
         }
 
-
-
-
-
-        //[HttpGet]
-        //public ActionResult AddCourse(Course course)
-        //{
-        //    return View();
-        //}
-
-
-
-
-        //[HttpPost]
-        //public ActionResult AddCourse(Course course)
-        //{
-        //    context.Courses.Add(course);
-        //    context.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
-
-
-
-
+        [HttpPost]
+        public ActionResult UpdateCourse(Course course)
+        {
+            var value = context.Courses.Find(course.CourseID);
+            value.Title = course.Title;
+            value.CategoryID = course.CategoryID;
+            value.Duration = course.Duration;
+            value.Price = course.Price;
+            value.ImageUrl = course.ImageUrl;
+            value.InstructorID = course.InstructorID;
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
