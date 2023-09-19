@@ -21,7 +21,10 @@
     @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
     <br /><br />
     <label>Kategorisini Seçiniz</label>
-    @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+    <br /><br />
+    <label>Eğitmen Seçiniz</label>
+    @Html.DropDownListFor(x => x.InstructorID, (List<SelectListItem>)ViewBag.v2, new { @class = "form-control" })
     <br /><br />
     <button class="btn btn-primary btn-block">Kursu Kaydet</button>
 </form>
