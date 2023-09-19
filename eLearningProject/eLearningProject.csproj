@@ -999,6 +999,7 @@
     <Content Include="Views\Address\Index.cshtml" />
     <Content Include="Views\Address\AddAddress.cshtml" />
     <Content Include="Views\Address\UpdateAddress.cshtml" />
+    <Content Include="Views\Course\CreateCourse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
