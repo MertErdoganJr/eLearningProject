@@ -142,6 +142,7 @@
     <Compile Include="DAL\Entities\About.cs" />
     <Compile Include="DAL\Entities\Address.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
+    <Compile Include="DAL\Entities\Comment.cs" />
     <Compile Include="DAL\Entities\Course.cs" />
     <Compile Include="DAL\Entities\CourseRegister.cs" />
     <Compile Include="DAL\Entities\Feature.cs" />
@@ -191,6 +192,10 @@
     <Compile Include="Migrations\202309192007244_mig_add_instructor_title.cs" />
     <Compile Include="Migrations\202309192007244_mig_add_instructor_title.designer.cs">
       <DependentUpon>202309192007244_mig_add_instructor_title.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309221720469_add_mig_comment.cs" />
+    <Compile Include="Migrations\202309221720469_add_mig_comment.designer.cs">
+      <DependentUpon>202309221720469_add_mig_comment.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1007,6 +1012,7 @@
     <Content Include="Views\Course\UpdateCourse.cshtml" />
     <Content Include="Views\InstructorAnlysis\Index.cshtml" />
     <Content Include="Views\InstructorAnlysis\InstructorPanelPartial.cshtml" />
+    <Content Include="Views\InstructorAnlysis\CommetPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1056,6 +1062,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202309192007244_mig_add_instructor_title.resx">
       <DependentUpon>202309192007244_mig_add_instructor_title.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309221720469_add_mig_comment.resx">
+      <DependentUpon>202309221720469_add_mig_comment.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

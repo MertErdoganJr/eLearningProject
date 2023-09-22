@@ -19,6 +19,7 @@ namespace eLearningProject.DAL.Context
         public DbSet<Feature> Features { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
     }
 }
