@@ -1017,6 +1017,7 @@
     <Content Include="Views\InstructorAnlysis\Index.cshtml" />
     <Content Include="Views\InstructorAnlysis\InstructorPanelPartial.cshtml" />
     <Content Include="Views\InstructorAnlysis\CommetPartial.cshtml" />
+    <Content Include="Views\InstructorAnlysis\CourseListByInstructor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
