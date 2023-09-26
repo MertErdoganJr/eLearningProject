@@ -209,6 +209,10 @@
     <Compile Include="Migrations\202309261857393_mig_add_review.designer.cs">
       <DependentUpon>202309261857393_mig_add_review.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202309262006376_mig_add_process.cs" />
+    <Compile Include="Migrations\202309262006376_mig_add_process.designer.cs">
+      <DependentUpon>202309262006376_mig_add_process.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1028,6 +1032,7 @@
     <Content Include="Views\InstructorAnlysis\CourseListByInstructor.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Profile\MyCourseList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1087,6 +1092,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202309261857393_mig_add_review.resx">
       <DependentUpon>202309261857393_mig_add_review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309262006376_mig_add_process.resx">
+      <DependentUpon>202309262006376_mig_add_process.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

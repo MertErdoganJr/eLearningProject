@@ -25,5 +25,7 @@ namespace eLearningProject.DAL.Entities
         public List<Review> Reviews { get; set; }
         public List<Process> Processes { get; set; }
 
+
+
     }
 }

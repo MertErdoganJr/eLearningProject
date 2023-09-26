@@ -20,8 +20,10 @@ namespace eLearningProject.Controllers
 
         public ActionResult MyCourseList()
         {
-
-            return View();
+            string values = Session["CurrentMail"].ToString();
+            int id = context.Students.Where(x=>x.Email == values).Select(y=>y.StudentID).FirstOrDefault();
+            var courseList = context.Processes.Where(x=>x.StudentID == id).ToList();
+            return View(courseList);
         }
     }
 }
