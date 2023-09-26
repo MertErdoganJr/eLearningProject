@@ -20,6 +20,8 @@ namespace eLearningProject.DAL.Context
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<Process> Processes { get; set; }
 
     }
 }

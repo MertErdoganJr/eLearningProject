@@ -20,7 +20,14 @@ namespace eLearningProject.Controllers
         {
             int id = 1;
             var values = context.Instructors.Where(x => x.InstructorID == id).ToList();
+            
+            var v1 = context.Instructors.Where(x => x.Name == "Ahmet" && x.Surname == "Ölçen").Select(y => y.InstructorID).FirstOrDefault();
+            var v2 = context.Courses.Where(x => x.InstructorID == v1).Select(y => y.CourseID).ToList();
+            ViewBag.courseCount = context.Courses.Where(x => x.InstructorID == 1).Count();
+            ViewBag.commentCount = context.Comments.Where(x => v2.Contains(x.CourseID)).Count();
+
             return PartialView(values);
+
         }
 
         public PartialViewResult CommetPartial()
