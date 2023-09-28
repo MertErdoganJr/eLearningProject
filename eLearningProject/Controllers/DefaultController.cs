@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using eLearningProject.DAL.Context;
+using Newtonsoft.Json.Linq;
 
 namespace eLearningProject.Controllers
 {
@@ -46,7 +47,9 @@ namespace eLearningProject.Controllers
         }
         public PartialViewResult _CategoryPartial()
         {
-            return PartialView();
+
+            var values = context.Courses.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult _CoursesPartial()
