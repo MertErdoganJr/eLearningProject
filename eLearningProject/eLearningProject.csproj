@@ -1035,6 +1035,18 @@
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Profile\MyCourseList.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\_HeadPartial.cshtml" />
+    <Content Include="Views\Default\_SpinnerPartial.cshtml" />
+    <Content Include="Views\Default\_NavbarPartial.cshtml" />
+    <Content Include="Views\Default\_CarouselPartial.cshtml" />
+    <Content Include="Views\Default\_ServicePartial.cshtml" />
+    <Content Include="Views\Default\_AboutPartial.cshtml" />
+    <Content Include="Views\Default\_CategoryPartial.cshtml" />
+    <Content Include="Views\Default\_CoursesPartial.cshtml" />
+    <Content Include="Views\Default\_TeamPartial.cshtml" />
+    <Content Include="Views\Default\_TestimonialPartial.cshtml" />
+    <Content Include="Views\Default\_FooterPartial.cshtml" />
+    <Content Include="Views\Default\_ScriptPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
