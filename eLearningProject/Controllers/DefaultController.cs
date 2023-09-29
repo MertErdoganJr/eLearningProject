@@ -66,11 +66,13 @@ namespace eLearningProject.Controllers
         }
         public PartialViewResult _TeamPartial()
         {
-            return PartialView();
+            var values = context.Instructors.ToList();
+            return PartialView(values);
         }
         public PartialViewResult _TestimonialPartial()
         {
-            return PartialView();
+            var values = context.Testimonials.ToList();
+            return PartialView(values);
         }
         public PartialViewResult _FooterPartial()
         {
