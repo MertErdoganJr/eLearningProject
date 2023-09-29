@@ -1,26 +1,67 @@
-﻿
+﻿@using PagedList
+@using PagedList.Mvc
+
+@model PagedList.IPagedList<eLearningProject.DAL.Entities.Course>
+
+@{
+    Layout = null;
+}
+
 <!DOCTYPE html>
 <html lang="tr">
 
-@Html.Action("_HeadPartial", "AboutPage")
+@Html.Action("_HeadPartial", "CoursePage")
 
 <body>
 
-    @Html.Action("_SpinnerPartial", "AboutPage")
+    @Html.Action("_SpinnerPartial", "CoursePage")
 
-    @Html.Action("_NavbarPartial", "AboutPage")
+    @Html.Action("_NavbarPartial", "CoursePage")
 
-    @Html.Action("_HeaderPartial", "AboutPage")
+    @Html.Action("_HeaderPartial", "CoursePage")
+
+    @*Paging-----------------------------------*@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Kurs Listesi</h2>
+                <table class="table table-bordered border-primary">
+                    <tr>
+                        <th class="font-bold">Kurs Adı</th>
+                        <th>Eğitmen</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.Title</td>
+                            <td>@item.Instructor.Name @item.Instructor.Surname</td>
+
+                        </tr>
+                    }
+                </table>
+                @Html.PagedListPager((IPagedList)Model, p => Url.Action("Index", new { p }), new PagedListRenderOptions
+{
+LiElementClasses = new List<String>
+{"page-link"}
+})
+            </div>
+        </div>
+    </div>
+    @*Paging End -------------------------------------------------------------*@
 
 
+    @Html.Action("_CoursePartial", "CoursePage")
 
-    @Html.Action("_FooterPartial", "AboutPage")
+    @Html.Action("_TestimonialPartial", "CoursePage")
+
+    @Html.Action("_FooterPartial", "CoursePage")
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-    @Html.Action("_ScriptPartial", "AboutPage")
+    @Html.Action("_ScriptPartial", "CoursePage")
 
 </body>
-
 </html>
