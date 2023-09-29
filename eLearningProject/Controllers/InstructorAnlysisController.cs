@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using eLearningProject.DAL.Context;
+using eLearningProject.DAL.Entities;
 
 namespace eLearningProject.Controllers
 {
@@ -25,6 +26,9 @@ namespace eLearningProject.Controllers
             var v2 = context.Courses.Where(x => x.InstructorID == v1).Select(y => y.CourseID).ToList();
             ViewBag.courseCount = context.Courses.Where(x => x.InstructorID == 1).Count();
             ViewBag.commentCount = context.Comments.Where(x => v2.Contains(x.CourseID)).Count();
+
+            var courseList = context.Courses.Where(x => x.InstructorID == v1).Select(y => y.CourseID).ToList();
+            ViewBag.averageReviewScore = context.Reviews.Where(x => courseList.Contains(x.CourseID)).Average(x => x.ReviewScore);
 
             return PartialView(values);
 

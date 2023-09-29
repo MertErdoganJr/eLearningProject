@@ -18,7 +18,6 @@
                         <th>#</th>
                         <th>Görsel</th>
                         <th>Eğitmen Adı-Soyadı</th>
-                        <th>Kurslar</th>
                         <th>İçerikleri Gör</th>
                         <th>Sil</th>
                         <th>Güncelle</th>
@@ -29,14 +28,13 @@
                             <td>@item.InstructorID</td>
                             <td><img src="@item.ImageUrl" class="rounded mx-auto d-block" style="height:50px; width:50px;" /></td>
                             <td>@item.Name @item.Surname</td>
-                            <td><a href="/Instructor/#/@item.InstructorID" class="btn btn-outline-warning">Kurslar</a></td>
-                            <td><a href="/Instructor/#/@item.InstructorID" class="btn btn-outline-info">İçerikleri Gör</a></td>
+                            <td><a href="/InstructorAnlysis/Index" class="btn btn-outline-info">Eğitmen Profili</a></td>
                             <td><a href="/Instructor/DeleteInstructor/@item.InstructorID" class="btn btn-outline-danger">Sil</a></td>
                             <td><a href="/Instructor/UpdateInstructor/@item.InstructorID" class="btn btn-outline-success">Güncelle</a></td>
                         </tr>
                     }
                 </table>
-                <a href="/Instructor/AddInstructor/" class="btn btn-outline-primary">Yeni Eğitmen Girişi</a>
+                <a href="/Instructor/AddInstructor/" class="btn btn-outline-primary btn-block">Yeni Eğitmen Girişi</a>
             </div>
         </div>
     </div>
