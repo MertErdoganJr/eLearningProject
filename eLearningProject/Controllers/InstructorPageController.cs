@@ -4,20 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using PagedList;
-using PagedList.Mvc;
 
 namespace eLearningProject.Controllers
 {
-    public class CoursePageController : Controller
+    public class InstructorPageController : Controller
     {
         eLearningContext context = new eLearningContext();
-        public ActionResult Index(int p =1)
+        public ActionResult Index()
         {
-            var values = context.Courses.ToList().ToPagedList(p, 5);
-            return PartialView(values);
+            return View();
         }
-
         public PartialViewResult _HeadPartial()
         {
             return PartialView();
@@ -38,9 +34,9 @@ namespace eLearningProject.Controllers
             return PartialView();
         }
 
-        public PartialViewResult _CoursePartial()
+        public PartialViewResult _InstructorPartial() 
         {
-            var values = context.Courses.Take(6).ToList();
+            var values = context.Instructors.ToList();
             return PartialView(values);
         }
 

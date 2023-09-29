@@ -314,9 +314,11 @@
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ContactPageController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\CoursePageController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\InstructorPageController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorAnlysisController.cs" />
@@ -330,6 +332,7 @@
     <Compile Include="DAL\Entities\Address.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
     <Compile Include="DAL\Entities\Comment.cs" />
+    <Compile Include="DAL\Entities\ContactUs.cs" />
     <Compile Include="DAL\Entities\Course.cs" />
     <Compile Include="DAL\Entities\CourseRegister.cs" />
     <Compile Include="DAL\Entities\Feature.cs" />
@@ -397,6 +400,10 @@
     <Compile Include="Migrations\202309262006376_mig_add_process.cs" />
     <Compile Include="Migrations\202309262006376_mig_add_process.designer.cs">
       <DependentUpon>202309262006376_mig_add_process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309291828028_add_mig_contactus.cs" />
+    <Compile Include="Migrations\202309291828028_add_mig_contactus.designer.cs">
+      <DependentUpon>202309291828028_add_mig_contactus.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1250,7 +1257,23 @@
     <Content Include="Views\CoursePage\_FooterPartial.cshtml" />
     <Content Include="Views\CoursePage\_ScriptPartial.cshtml" />
     <Content Include="Views\CoursePage\_CoursePartial.cshtml" />
-    <Content Include="Views\CoursePage\_TestimonialPartial.cshtml" />
+    <Content Include="Views\InstructorPage\Index.cshtml" />
+    <Content Include="Views\InstructorPage\_HeadPartial.cshtml" />
+    <Content Include="Views\InstructorPage\_SpinnerPartial.cshtml" />
+    <Content Include="Views\InstructorPage\_NavbarPartial.cshtml" />
+    <Content Include="Views\InstructorPage\_HeaderPartial.cshtml" />
+    <Content Include="Views\InstructorPage\_InstructorPartial.cshtml" />
+    <Content Include="Views\InstructorPage\_FooterPartial.cshtml" />
+    <Content Include="Views\InstructorPage\_ScriptPartial.cshtml" />
+    <Content Include="Views\AboutPage\_TestimonialPartial.cshtml" />
+    <Content Include="Views\ContactPage\Index.cshtml" />
+    <Content Include="Views\ContactPage\_HeadPartial.cshtml" />
+    <Content Include="Views\ContactPage\_SpinnerPartial.cshtml" />
+    <Content Include="Views\ContactPage\_NavbarPartial.cshtml" />
+    <Content Include="Views\ContactPage\_FooterPartial.cshtml" />
+    <Content Include="Views\ContactPage\_ScriptPartial.cshtml" />
+    <Content Include="Views\ContactPage\_ContactPartial.cshtml" />
+    <Content Include="Views\ContactPage\_HeaderPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1312,6 +1335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202309262006376_mig_add_process.resx">
       <DependentUpon>202309262006376_mig_add_process.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309291828028_add_mig_contactus.resx">
+      <DependentUpon>202309291828028_add_mig_contactus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

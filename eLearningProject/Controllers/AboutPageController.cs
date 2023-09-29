@@ -52,6 +52,12 @@ namespace eLearningProject.Controllers
             return PartialView(values);
         }
 
+        public PartialViewResult _TestimonialPartial()
+        {
+            var values = context.Testimonials.ToList();
+            return PartialView(values);
+        }
+
         public PartialViewResult _FooterPartial()
         {
             return PartialView();

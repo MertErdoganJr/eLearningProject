@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+@Html.Action("_HeadPartial", "InstructorPage")
+
+<body>
+
+    @Html.Action("_SpinnerPartial", "InstructorPage")
+
+    @Html.Action("_NavbarPartial", "InstructorPage")
+
+    @Html.Action("_HeaderPartial", "InstructorPage")
+
+    @Html.Action("_InstructorPartial", "InstructorPage")
+
+    @Html.Action("_FooterPartial", "InstructorPage")
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    @Html.Action("_ScriptPartial", "InstructorPage")
+
+</body>
+
+</html>

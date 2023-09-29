@@ -66,7 +66,7 @@ namespace eLearningProject.Controllers
         }
         public PartialViewResult _TeamPartial()
         {
-            var values = context.Instructors.ToList();
+            var values = context.Instructors.Take(4).ToList();
             return PartialView(values);
         }
         public PartialViewResult _TestimonialPartial()

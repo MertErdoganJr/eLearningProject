@@ -1,0 +1,31 @@
+﻿
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+@Html.Action("_HeadPartial", "ContactPage")
+
+<body>
+
+    @Html.Action("_SpinnerPartial", "ContactPage")
+
+    @Html.Action("_NavbarPartial", "ContactPage")
+
+    @Html.Action("_HeaderPartial", "ContactPage")
+
+    @Html.Action("_ContactPartial", "ContactPage")
+
+    @Html.Action("_FooterPartial", "ContactPage")
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    @Html.Action("_ScriptPartial", "Default")
+
+</body>
+
+</html>
