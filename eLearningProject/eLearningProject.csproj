@@ -328,6 +328,7 @@
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentPanelLayoutController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="DAL\Context\eLearningContext.cs" />
     <Compile Include="DAL\Entities\About.cs" />
@@ -1399,10 +1400,19 @@
     <Content Include="Templates\login-form-20\scss\bootstrap\_variables.scss" />
     <Content Include="Templates\login-form-20\scss\style.scss" />
     <Content Include="Views\Message\Index.cshtml" />
+    <Content Include="Views\StudentPanelLayout\Index.cshtml" />
+    <Content Include="Views\StudentPanelLayout\PartialHead.cshtml" />
+    <Content Include="Views\StudentPanelLayout\PartialSidebar.cshtml" />
+    <Content Include="Views\StudentPanelLayout\PartialScript.cshtml" />
+    <Content Include="Views\StudentPanelLayout\PartialNavbar.cshtml" />
+    <Content Include="Views\StudentPanelLayout\PartialPageRowTitle.cshtml" />
+    <Content Include="Views\StudentPanelLayout\PartialPreloader.cshtml" />
+    <Content Include="Views\StudentPanelLayout\PartialFooter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\StudentPanel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

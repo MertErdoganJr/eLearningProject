@@ -1,13 +1,37 @@
 ﻿@model List<eLearningProject.DAL.Entities.Process>
 
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/StudentPanelLayout/Index.cshtml";
     int count = 0;
 }
 
-<h3>Kurs Listeniz</h3>
-@foreach (var item in Model)
-{
-    count++;
-    <p>@count   - @item.Course.Title </p>
-}
+<div class="container-fluid">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            count++;
+            <div class="col-4">
+                <div class="card">
+                    <img class="card-img-top" src="@item.Course.ImageUrl" alt="Card image cap">
+                    <div class="card-block little-profile text-center">
+                        <h3 class="m-b-0">@item.Course.Title</h3>
+                        <p>Eğitmen: Null</p>
+                        <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded">Kurs İçeriği</a>
+                        <div class="row text-center m-t-20">
+                            <div class="col-lg-4 col-md-4 m-t-20">
+                                <small>Fiyat</small><h3 class="m-b-0 font-light">@item.Course.Price ₺</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-4 m-t-20">
+                                <small>Dakika</small><h3 class="m-b-0 font-light">@item.Course.Duration</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-4 m-t-20">
+                                <small>Kayıt</small><h3 class="m-b-0 font-light">662</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

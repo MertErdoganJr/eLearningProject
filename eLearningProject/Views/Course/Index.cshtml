@@ -41,34 +41,35 @@
 
 <a href="/Course/CreateCourse/" class="btn btn-warning btn-block">Yeni Kurs Girişi</a>
 <br />
-
-<div class="row">
-    @foreach (var item in Model)
-    {
-        <div class="col-4">
-            <div class="card">
-                <img class="card-img-top" src="@item.ImageUrl" alt="Card image cap">
-                <div class="card-block little-profile text-center">
-                    <h3 class="m-b-0">@item.Title</h3>
-                    <p>Eğitmen: @item.Instructor.Name @item.Instructor.Surname</p>
-                    <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded">Kurs İçeriği</a>
-                    <a href="/Course/UpdateCourse/@item.CourseID" class="m-t-10 waves-effect waves-dark btn btn-success btn-md btn-rounded">Güncelle</a>
-                    <a href="/Course/DeleteCourse/@item.CourseID" class="m-t-10 waves-effect waves-dark btn btn-danger btn-md btn-rounded">Sil</a>
-                    <div class="row text-center m-t-20">
-                        <div class="col-lg-4 col-md-4 m-t-20">
-                            <small>Fiyat</small><h3 class="m-b-0 font-light">@item.Price ₺</h3>
-                        </div>
-                        <div class="col-lg-4 col-md-4 m-t-20">
-                            <small>Dakika</small><h3 class="m-b-0 font-light">@item.Duration</h3>
-                        </div>
-                        <div class="col-lg-4 col-md-4 m-t-20">
-                            <small>Kayıt</small><h3 class="m-b-0 font-light">662</h3>
+<div class="container-fluid">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-4">
+                <div class="card">
+                    <img class="card-img-top" src="@item.ImageUrl" alt="Card image cap">
+                    <div class="card-block little-profile text-center">
+                        <h3 class="m-b-0">@item.Title</h3>
+                        <p>Eğitmen: @item.Instructor.Name @item.Instructor.Surname</p>
+                        <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded">Kurs İçeriği</a>
+                        <a href="/Course/UpdateCourse/@item.CourseID" class="m-t-10 waves-effect waves-dark btn btn-success btn-md btn-rounded">Güncelle</a>
+                        <a href="/Course/DeleteCourse/@item.CourseID" class="m-t-10 waves-effect waves-dark btn btn-danger btn-md btn-rounded">Sil</a>
+                        <div class="row text-center m-t-20">
+                            <div class="col-lg-4 col-md-4 m-t-20">
+                                <small>Fiyat</small><h3 class="m-b-0 font-light">@item.Price ₺</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-4 m-t-20">
+                                <small>Dakika</small><h3 class="m-b-0 font-light">@item.Duration</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-4 m-t-20">
+                                <small>Kayıt</small><h3 class="m-b-0 font-light">662</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 </div>
 
 
