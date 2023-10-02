@@ -25,6 +25,7 @@ namespace eLearningProject.Controllers
         {
             var values1 = context.Students.FirstOrDefault(x => x.Email == student.Email && x.Password == student.Password);
             var values2 = context.Admins.FirstOrDefault(x => x.Email == admin.Email && x.Password == admin.Password);
+
             if (values1 != null)
             {
                 FormsAuthentication.SetAuthCookie(values1.Email, false);
