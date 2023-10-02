@@ -312,7 +312,9 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AboutPageController.cs" />
     <Compile Include="Controllers\AddressController.cs" />
+    <Compile Include="Controllers\AdminDashboardController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\AdminProfileController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactPageController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
@@ -330,6 +332,7 @@
     <Compile Include="DAL\Context\eLearningContext.cs" />
     <Compile Include="DAL\Entities\About.cs" />
     <Compile Include="DAL\Entities\Address.cs" />
+    <Compile Include="DAL\Entities\Admin.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
     <Compile Include="DAL\Entities\Comment.cs" />
     <Compile Include="DAL\Entities\ContactUs.cs" />
@@ -404,6 +407,10 @@
     <Compile Include="Migrations\202309291828028_add_mig_contactus.cs" />
     <Compile Include="Migrations\202309291828028_add_mig_contactus.designer.cs">
       <DependentUpon>202309291828028_add_mig_contactus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202310021455581_mig_admintable.cs" />
+    <Compile Include="Migrations\202310021455581_mig_admintable.designer.cs">
+      <DependentUpon>202310021455581_mig_admintable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1274,6 +1281,8 @@
     <Content Include="Views\ContactPage\_ScriptPartial.cshtml" />
     <Content Include="Views\ContactPage\_ContactPartial.cshtml" />
     <Content Include="Views\ContactPage\_HeaderPartial.cshtml" />
+    <Content Include="Views\AdminProfile\Index.cshtml" />
+    <Content Include="Views\AdminDashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1338,6 +1347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202309291828028_add_mig_contactus.resx">
       <DependentUpon>202309291828028_add_mig_contactus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310021455581_mig_admintable.resx">
+      <DependentUpon>202310021455581_mig_admintable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

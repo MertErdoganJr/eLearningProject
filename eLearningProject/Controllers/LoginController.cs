@@ -21,15 +21,24 @@ namespace eLearningProject.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(Student student)
+        public ActionResult Index(Student student, Admin admin)
         {
-            var values = context.Students.FirstOrDefault(x => x.Email == student.Email && x.Password == student.Password);
-            if (values != null)
+            var values1 = context.Students.FirstOrDefault(x => x.Email == student.Email && x.Password == student.Password);
+            var values2 = context.Admins.FirstOrDefault(x => x.Email == admin.Email && x.Password == admin.Password);
+            if (values1 != null)
             {
-                FormsAuthentication.SetAuthCookie(values.Email, false);
-                Session["CurrentMail"] = values.Email;
+                FormsAuthentication.SetAuthCookie(values1.Email, false);
+                Session["CurrentMail"] = values1.Email;
                 Session.Timeout = 60;
                 return RedirectToAction("Index", "Profile");
+            }
+
+            if(values2 != null)
+            {
+                FormsAuthentication.SetAuthCookie(values2.Email, false);
+                Session["CurrentMail"] = values2.Email;
+                Session.Timeout = 60;
+                return RedirectToAction("Index", "AdminDashboard");
             }
             return View();
         }
