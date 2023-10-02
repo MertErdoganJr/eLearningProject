@@ -12,7 +12,16 @@ namespace eLearningProject.Controllers
         eLearningContext context = new eLearningContext();
         public ActionResult Index()
         {
-            return View();
+            var values = context.ContactUss.ToList();
+            return View(values);
+        }
+
+        public ActionResult DeleteMessage(int id)
+        {
+            var value = context.ContactUss.Find(id);
+            context.ContactUss.Remove(value);
+            context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
