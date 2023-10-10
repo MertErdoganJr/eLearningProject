@@ -1,0 +1,24 @@
+﻿@model List<eLearningProject.DAL.Entities.Course>
+
+@{
+    ViewBag.Title = "WatchCourse";
+    Layout = "~/Views/StudentPanelLayout/Index.cshtml";
+}
+
+
+
+<div class="tab-pane" id="settings" role="tabpanel">
+    <div class="card-block">
+
+
+        @foreach (var item in Model)
+        {
+            <iframe width="900" height="600" src="@item.VideoUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        }
+
+    </div>
+</div>
+<br>
+<a href="/Review/Index/" class="btn btn-primary">Kursu Değerlendir</a>
+
+

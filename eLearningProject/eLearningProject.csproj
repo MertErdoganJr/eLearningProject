@@ -327,6 +327,7 @@
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\StudentPanelLayoutController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
@@ -412,6 +413,10 @@
     <Compile Include="Migrations\202310021455581_mig_admintable.cs" />
     <Compile Include="Migrations\202310021455581_mig_admintable.designer.cs">
       <DependentUpon>202310021455581_mig_admintable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202310101234442_mig_coursevideourl.cs" />
+    <Compile Include="Migrations\202310101234442_mig_coursevideourl.designer.cs">
+      <DependentUpon>202310101234442_mig_coursevideourl.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -893,6 +898,12 @@
     <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-time.css" />
     <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-wind-names.css" />
     <Content Include="Templates\material-lite-master\table-basic.html" />
+    <Content Include="Templates\v2.3.2\index.html" />
+    <Content Include="Templates\v2.3.2\jquery.min.js" />
+    <Content Include="Templates\v2.3.2\jquery.rateyo.css" />
+    <Content Include="Templates\v2.3.2\jquery.rateyo.js" />
+    <Content Include="Templates\v2.3.2\jquery.rateyo.min.css" />
+    <Content Include="Templates\v2.3.2\jquery.rateyo.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1408,6 +1419,12 @@
     <Content Include="Views\StudentPanelLayout\PartialPageRowTitle.cshtml" />
     <Content Include="Views\StudentPanelLayout\PartialPreloader.cshtml" />
     <Content Include="Views\StudentPanelLayout\PartialFooter.cshtml" />
+    <Content Include="Views\Profile\CourseListByStudentProfile.cshtml" />
+    <Content Include="Views\Profile\WatchCourse.cshtml" />
+    <Content Include="Templates\v2.3.2\jquery.rateyo.less" />
+    <Content Include="Templates\v2.3.2\jquery.rateyo.min.css.map" />
+    <Content Include="Templates\v2.3.2\jquery.rateyo.min.js.map" />
+    <Content Include="Views\Review\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1475,6 +1492,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310021455581_mig_admintable.resx">
       <DependentUpon>202310021455581_mig_admintable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310101234442_mig_coursevideourl.resx">
+      <DependentUpon>202310101234442_mig_coursevideourl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
