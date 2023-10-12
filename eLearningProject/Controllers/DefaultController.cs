@@ -61,6 +61,7 @@ namespace eLearningProject.Controllers
 
         public PartialViewResult _CoursesPartial()
         {
+            //ViewBag.course1Avg = context.Reviews.Where(x => x.CourseID == 1).Average(x => x.ReviewScore);
             var values = context.Courses.Take(6).ToList();
             return PartialView(values);
         }

@@ -3,68 +3,91 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/StudentPanelLayout/Index.cshtml";
+    Layout = null;
 }
 
 
 
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 <head>
-    <link rel="stylesheet" href="~/css-half-star-rating/dist/style.css">
+    <title>Kurs Puanlama | eLearning </title>
+
+    <link rel="stylesheet" href="~/Templates/css-half-star-rating/dist/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link href="~/Templates/material-lite-master/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
+
 </head>
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="~/Scripts/jquery-3.4.1.js"></script>
-<script src="~/Scripts/bootstrap.min.js"></script>
 
 <div>
+
     <br />
     <br />
+
     <div class="container card text-center">
+
         <form method="post">
-            <br />
-            <h3>Kurs Seçin</h3>
+
+            <label>Kurs Seçin</label>
             <br />
             @Html.DropDownListFor(x => x.CourseID, (List<SelectListItem>)ViewBag.course, new { @class = "form-control" })
-            <br /><br />
-            <div id="Rating" class="container text-center">
-                <input type="hidden" name="ReviewScore" id="rating" />
-            </div>
             <br />
-            <div class="container">
-                <button class="btn btn-success" id="btn1">Kaydet</button>
-            </div>
+
+            <fieldset class="rate">
+                <input type="radio" id="rating10" name="ReviewScore" value="10" />
+                <label for="rating10" title="10"></label>
+                <input type="radio" id="rating9" name="ReviewScore" value="9" />
+                <label class="half" for="rating9" title="9"></label>
+                <input type="radio" id="rating8" name="ReviewScore" value="8" />
+                <label for="rating8" title="8"></label>
+                <input type="radio" id="rating7" name="ReviewScore" value="7" />
+                <label class="half" for="rating7" title="7"></label>
+                <input type="radio" id="rating6" name="ReviewScore" value="6" />
+                <label for="rating6" title="6"></label>
+                <input type="radio" id="rating5" name="ReviewScore" value="5" />
+                <label class="half" for="rating5" title="5"></label>
+                <input type="radio" id="rating4" name="ReviewScore" value="4" />
+                <label for="rating4" title="4"></label>
+                <input type="radio" id="rating3" name="ReviewScore" value="3" />
+                <label class="half" for="rating3" title="3"></label>
+                <input type="radio" id="rating2" name="ReviewScore" value="2" />
+                <label for="rating2" title="2"></label>
+                <input type="radio" id="rating1" name="ReviewScore" value="1" />
+                <label class="half" for="rating1" title="1"></label>
+
+            </fieldset>
+
+
             <br />
+            <button type="submit" class="btn btn-warning" onclick="ReviewAlert()">Kaydet</button>
         </form>
+
+
+
     </div>
+
 </div>
 
+
+
 <script>
-    $(function () {
+    function ReviewAlert() {
+        Swal.fire({
 
-        $("#Rating").rateYo({
+            title: 'Tebrikler',
+            text: 'Oyunuz sisteme kaydedildi! ',
+            icon: 'success',
+            showCancelButton: false,
+            confirmButtonText: 'Tamam',
 
-            rating: 0,
-            numStars: 10,
-            maxValue: 10,
-            fullStar: true,
-
-            multiColor: {
-
-                "startColor": "#808080",
-                "endColor": "#F39C12"
-            },
-            onChange: function (rating, rateYoInstance) {
-                $('#rating').val(rating);
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "/Profile/Index"; // Yönlendirilecek URL'yi buraya yazın
             }
         });
-    });
-
-    $('#btn1').click(function () {
-        swal("Değerlendirmeniz Kaydedildi", "Butona Tıklayın", "success");
-    });
-
+    }
 </script>
-

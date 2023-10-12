@@ -15,7 +15,8 @@ namespace eLearningProject.Controllers
 
         [HttpGet]
         public ActionResult Index()
-        {           
+        {
+            
             var values = context.Courses.ToList();
             List<SelectListItem> courseList = (from x in values
                                                select new SelectListItem
@@ -24,16 +25,22 @@ namespace eLearningProject.Controllers
                                                    Value = x.CourseID.ToString(),
                                                }).ToList();
             ViewBag.course = courseList;
+            
             return View();
         }
 
         [HttpPost]
         public ActionResult Index(Review review)
         {
-            var user = context.Students.Find(review.StudentID);
-            //user.StudentID = review.StudentID;
+            var email = Session["CurrentMail"];
+            
+            var studentID = context.Students.Where(x => x.Email == email.ToString()).Select(x => x.StudentID).FirstOrDefault();
+            review.StudentID = studentID;
+            context.Reviews.Add(review);
+
             context.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Profile");
         }
+
     }
 }

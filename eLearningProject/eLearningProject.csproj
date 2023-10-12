@@ -444,6 +444,11 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Templates\css-half-star-rating\dist\index.html" />
+    <Content Include="Templates\css-half-star-rating\dist\style.css" />
+    <Content Include="Templates\css-half-star-rating\LICENSE.txt" />
+    <Content Include="Templates\css-half-star-rating\src\index.html" />
+    <Content Include="Templates\css-half-star-rating\src\style.css" />
     <Content Include="Templates\elearning-html-template\404.html" />
     <Content Include="Templates\elearning-html-template\about.html" />
     <Content Include="Templates\elearning-html-template\contact.html" />
@@ -1425,6 +1430,7 @@
     <Content Include="Templates\v2.3.2\jquery.rateyo.min.css.map" />
     <Content Include="Templates\v2.3.2\jquery.rateyo.min.js.map" />
     <Content Include="Views\Review\Index.cshtml" />
+    <Content Include="Templates\css-half-star-rating\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

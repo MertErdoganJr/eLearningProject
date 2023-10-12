@@ -36,9 +36,9 @@ namespace eLearningProject.Controllers
         }
 
         public ActionResult WatchCourse()
-        {
-            var values = context.Courses.Take(1).ToList();
-            return View(values);
+        {          
+            var courseList = context.Courses.Take(1).ToList();
+            return View(courseList);
         }
 
     }
